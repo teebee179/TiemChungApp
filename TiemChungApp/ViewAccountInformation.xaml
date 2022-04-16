@@ -24,5 +24,8 @@
 
         <Label Content="Date of birth: " Name="DoBLab" Width="80" Height="35" Canvas.Left="121" Canvas.Top="210" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <TextBlock Name="DOBTextBlock" Width="80" Height="35" Canvas.Left="228" Canvas.Top="210" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+        <Button Name="btnOK" Content="OK" Width="50" Height="35" Click="btnOK_Click" Canvas.Left="111" Canvas.Top="343"/>
+        <Button Name="btnEdit" Content="Edit" Width="50" Height="35" Click="btnEdit_Click" Canvas.Left="375" Canvas.Top="343" HorizontalAlignment="Left" VerticalAlignment="Center"/>
     </Canvas>
 </Window>
