@@ -1,0 +1,18 @@
+﻿<Window x:Class="TiemChungApp.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TiemChungApp"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="uname" HorizontalAlignment="Left" Margin="256,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="pw" HorizontalAlignment="Left" Margin="256,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="158,184,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="162,220,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="login_b" Content="Login" HorizontalAlignment="Left" Margin="303,269,0,0" VerticalAlignment="Top" Height="33" Width="97"/>
+        <Button x:Name="forgotpw_b" Content="Forgot Password" HorizontalAlignment="Left" Margin="427,269,0,0" VerticalAlignment="Top" Height="33" Width="97" Click="forgotpw_b_Click"/>
+
+    </Grid>
+</Window>
