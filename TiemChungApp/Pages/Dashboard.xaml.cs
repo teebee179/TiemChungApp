@@ -10,33 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TiemChungApp
+namespace TiemChungApp.Pages
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for Dashboard.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class Dashboard : Page
     {
-        public Login()
+        public Dashboard()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void changepw_b_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void forgotpw_b_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
