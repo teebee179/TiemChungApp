@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using TiemChungApp.Pages;
 
 namespace TiemChungApp
@@ -14,8 +15,6 @@ namespace TiemChungApp
 
         }
 
-
-
         private void CloseWindow(object sender, RoutedEventArgs e)
         {
 
@@ -27,10 +26,14 @@ namespace TiemChungApp
             Main.Content = new Dashboard();
             Main.NavigationService.RemoveBackEntry();
         }
-
         private void NavigateToReceipt(object sender, RoutedEventArgs e)
         {
             Main.Content = new Receipt();
+        }
+
+        private void NavigateToRegistergVaccination(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new ViewRegisterForm();
             Main.NavigationService.RemoveBackEntry();
         }
     }

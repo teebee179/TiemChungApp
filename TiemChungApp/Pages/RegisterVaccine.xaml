@@ -1,0 +1,66 @@
+﻿<Page x:Class="TiemChungApp.Pages.RegisterVaccine"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TiemChungApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RegisterVaccine" Loaded="Page_Loaded">
+    <Canvas Background="#039BE5" Margin="0,0,0,-30" >
+        <Label Canvas.Left="121" Canvas.Top="31" FontSize="15" Foreground="White" FontWeight="DemiBold">--------Patient information--------</Label>
+        <Label Content="Register vaccination" FontSize="20" Foreground="White" FontWeight="DemiBold" Canvas.Left="267" Canvas.Top="3"></Label>
+        <Label Content="Full name" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="31" Canvas.Top="92"></Label>
+        <TextBox Height="25" Name="username" Canvas.Left="119" Canvas.Top="97" Width="238"></TextBox>
+        <Label Content="DOB " FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="31" Canvas.Top="127" RenderTransformOrigin="-3.143,2.506"></Label>
+        <DatePicker Height="25" Name="dob" Canvas.Left="119" Canvas.Top="129" Width="238"></DatePicker>
+        <Label Content="Gender" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="31" Canvas.Top="162"/>
+        <CheckBox Canvas.Left="119" Canvas.Top="171" Name="isMale">Male</CheckBox>
+        <CheckBox Canvas.Left="187" Canvas.Top="171" Name="isFemale">Female</CheckBox>
+        <Label Content="UserCode" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="31" Canvas.Top="57"/>
+        <TextBox Height="26" Name="UserCode" Canvas.Left="119" Canvas.Top="61" Width="238"></TextBox>
+        <Label Content="Address" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="31" Canvas.Top="227"/>
+        <TextBox Height="25" Name="address" Canvas.Left="119" Canvas.Top="232" Width="238"></TextBox>
+        <Label Content="Phone " FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="31" Canvas.Top="197"/>
+        <TextBox Height="26" Name="phone" Canvas.Left="119" Canvas.Top="197" Width="238"></TextBox>
+        <Label Content="Relationship" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="31" Canvas.Top="331"/>
+        <TextBox Height="25" x:Name="relationship" Canvas.Left="131" Canvas.Top="336" Width="226"/>
+
+        <Label Canvas.Left="127" Canvas.Top="270" FontSize="15" Foreground="White" FontWeight="DemiBold">--------Parent information--------</Label>
+        <Label Content="Parent name" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="31" Canvas.Top="296"/>
+        <TextBox Height="26" x:Name="parentName" Canvas.Left="131" Canvas.Top="300" Width="226"/>
+        <Label Content="Phone " FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="31" Canvas.Top="366"/>
+        <TextBox Height="26" x:Name="parentPhone" Canvas.Left="131" Canvas.Top="370" Width="226"/>
+
+        <Label Canvas.Left="464" Canvas.Top="31" FontSize="15" Foreground="White" FontWeight="DemiBold" Content="--------Vaccination Info--------"/>
+        <Label FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="400" Canvas.Top="73">Center</Label>
+        <ComboBox Canvas.Left="511" Canvas.Top="75" Width="119" x:Name="centreCombobox"></ComboBox>
+        <Label FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="398" Canvas.Top="106">Vaccine name</Label>
+        <ComboBox Canvas.Left="511" Canvas.Top="110" Width="119" x:Name="vaccineCombobox">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding name}"></TextBlock>
+                        <TextBlock Text="-"></TextBlock>
+                        <TextBlock Text="{Binding expiredDate}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Label FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="398" Canvas.Top="143">Vaccine pack</Label>
+        <ListBox Name="selectCombo" SelectionMode="Multiple" Width="119" Height="81" Canvas.Left="511" Canvas.Top="142">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding comboName}"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Label FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="398" Canvas.Top="232" Content="Inject date"/>
+        <DatePicker Name="injectDate" Width="119" Canvas.Left="511" Canvas.Top="232"></DatePicker>
+
+        <Button Width="80" Height="35" Name="submitBtn" Canvas.Left="299" Canvas.Top="419" Click="submitBtn_Click">Submit</Button>
+        <Button Width="80" Height="35" Name="cancelBtn" Canvas.Left="417" Canvas.Top="419">Cancel</Button>
+    </Canvas>
+</Page>

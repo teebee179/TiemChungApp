@@ -1,0 +1,49 @@
+﻿<Page x:Class="TiemChungApp.Pages.ViewRegisterForm"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TiemChungApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ViewRegisterForm" Loaded="Page_Loaded">
+
+    <StackPanel>
+    
+        <DataGrid x:Name="FormListView" AutoGenerateColumns="False" 
+                            EnableRowVirtualization="True" 
+                             Margin="5,1,5,241" RowDetailsVisibilityMode="VisibleWhenSelected" DockPanel.Dock="Top">
+            <DataGrid.ContextMenu>
+                <ContextMenu Background="LightGray">
+                    <MenuItem Header="Delete" Click="deleteMenuItem_Click"/>
+                    <MenuItem Header="Edit" Click="editMenuItem_Click"/>
+                    <MenuItem Header="Detail" Click="orderDetail_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id}"
+                            Header="Id" Width="SizeToHeader"
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding customerName}"
+                            Header="Customer name" Width="*"
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding DOB}"
+                            Header="DOB" Width="*"
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding parentName}"
+                            Header="Parent name" Width="*"
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding injectDate}"
+                            Header="Inject date" Width="*"
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding vaccine}"
+                            Header="Vaccine" Width="*"
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding combo}"
+                            Header="Vaccine pack" Width="*"
+                            IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="addBtn" Click="addBtn_Click">New register form</Button>
+    </StackPanel>
+</Page>
