@@ -108,7 +108,7 @@
             <Frame NavigationUIVisibility="Hidden" Panel.ZIndex="1" Name="Main" Source="Pages/Dashboard.xaml">
             </Frame>
         </Grid>
-
+        
         <Grid Grid.Row="1">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -134,8 +134,14 @@
                         <materialDesign:PackIcon Kind="ViewDashboard" VerticalAlignment="Center"/>
                         <TextBlock HorizontalAlignment="Center" Text="DASHBOARD" FontFamily="Champagne &amp; Limousines"/>
                     </Grid>
-                </Button
-                 <!--<Button Margin="10" Background="#3B99D7" BorderBrush="#3B99D7" Click="NavigateToDashboard">
+                </Button>
+                <Button Margin="10" Background="#3B99D7" BorderBrush="#3B99D7" Click="NavigateToReceipt">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Receipt" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="RECEIPT" FontFamily="Champagne &amp; Limousines"/>
+                    </Grid>
+                </Button>
+                <!--<Button Margin="10" Background="#3B99D7" BorderBrush="#3B99D7" Click="NavigateToDashboard">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="ViewDashboard" VerticalAlignment="Center"/>
                         <TextBlock HorizontalAlignment="Center" Text="DASHBOARD" FontFamily="Champagne &amp; Limousines"/>
