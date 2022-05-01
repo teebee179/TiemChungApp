@@ -27,5 +27,11 @@ namespace TiemChungApp
             Main.Content = new Dashboard();
             Main.NavigationService.RemoveBackEntry();
         }
+
+        private void NavigateToReceipt(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Receipt();
+            Main.NavigationService.RemoveBackEntry();
+        }
     }
 }
