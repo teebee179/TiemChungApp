@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using TiemChungApp.Windows;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -12,32 +13,40 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TiemChungApp.Models;
 
 
 namespace TiemChungApp.Pages
 {
     public partial class UserInformation : Page
     {
-        class User
-        {
-            public int CustomerID { get; set; }
-            public string Name { get; set; }
-            public string Address { get; set; }
-            public int PhoneNumber { get; set; }
-            public string DOB { get; set; }
-            public string Password { get; set; }
+        //class User : INotifyPropertyChanged, ICloneable
+        //{
+        //    public event PropertyChangedEventHandler? PropertyChanged;
+        //    public int CustomerID { get; set; }
+        //    public string Name { get; set; }
+        //    public string Address { get; set; }
+        //    public int PhoneNumber { get; set; }
+        //    public string DOB { get; set; }
+        //    public string Password { get; set; }
 
-            public User(int ID, string name, string address, int phone, string dob, string pass)
-            {
-                this.CustomerID = ID;
-                this.Name = name;
-                this.Address = address;
-                this.PhoneNumber = phone;
-                this.DOB = dob;
-                this.Password = pass;
-            }
-        }
+        //    public User(int ID, string name, string address, int phone, string dob, string pass)
+        //    {
+        //        this.CustomerID = ID;
+        //        this.Name = name;
+        //        this.Address = address;
+        //        this.PhoneNumber = phone;
+        //        this.DOB = dob;
+        //        this.Password = pass;
+        //    }
 
+        //    public object Clone()
+        //    {
+        //        return MemberwiseClone();
+        //    }
+        //}
+
+        /**
         List<User> Users = new List<User>()
         {
             new User(1, "Vu Quang Hiep", "TP HCM", 0909999222, "02/01/2001", "123"),
@@ -58,5 +67,31 @@ namespace TiemChungApp.Pages
                      select user;
             this.DataContext = Us;
         }
+
+        private void EditInformationBtn_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var user in Users)
+            {
+                if(user.CustomerID == 1)
+                {
+                    User Us = user;
+                    var screen = new EditUserInformation(Us);
+                    if (screen.ShowDialog() == true)
+                    {
+                        var info = screen.EditedUser;
+                        Us.Name = info.Name;
+                        Us.Address = info.Address;
+                        Us.PhoneNumber = info.PhoneNumber;
+                        Us.DOB = info.DOB;
+                    }
+                }
+            }
+        }
+
+        private void OKbtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        **/
     }
 }

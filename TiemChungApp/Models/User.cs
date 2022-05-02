@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TiemChungApp.Models
 {
-    public class User : INotifyPropertyChanged
+    public class User : INotifyPropertyChanged, ICloneable
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -26,6 +26,11 @@ namespace TiemChungApp.Models
             this.PhoneNumber = phone;  
             this.DOB = dob; 
             this.Password = pass;
+        }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
         }
     }
 }
