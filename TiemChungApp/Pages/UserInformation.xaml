@@ -13,6 +13,7 @@
         <Label Content="Address:" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="60" Canvas.Top="163" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Content="Phone number:" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="14" Canvas.Top="213" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Content="Date of birth:" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="27" Canvas.Top="263" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content= "Sex:" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="90" Canvas.Top="313" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Content="Full name:" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="49" Canvas.Top="113"/>
 
         <TextBlock x:Name="CustomerID_Textbl" Text="{Binding CustomerID}" Height="30" Width="200" Canvas.Left="159" Canvas.Top="61" FontSize="15" Foreground="White" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
@@ -20,8 +21,9 @@
         <TextBlock x:Name="Address_Textbl" Text="{Binding Address}" Height="30" Width="200" Canvas.Left="159" Canvas.Top="167" FontSize="15" Foreground="White" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <TextBlock x:Name="Phonenumber_Textbl" Text="{Binding PhoneNumber}" Height="30" Width="200" Canvas.Left="159" Canvas.Top="217" FontSize="15" Foreground="White" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <TextBlock x:Name="DOB_Textbl" Text="{Binding DOB}" Height="30" Width="200" Canvas.Left="159" Canvas.Top="267" FontSize="15" Foreground="White" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Sex_Textbl" Text="{Binding Sex}" Height="30" Width="200" Canvas.Left="159" Canvas.Top="317" FontSize="15" Foreground="White" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Canvas.Left="259" Canvas.Top="370">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Canvas.Left="259" Canvas.Top="382" VerticalAlignment="Top">
             <Button Margin="5" Width="90" Name="EditInformationBtn" Click="EditInformationBtn_Click" >Edit</Button>
             <Button Margin="5" Width="90" Name="OKbtn" Click="OKbtn_Click" >OK</Button>
         </StackPanel>

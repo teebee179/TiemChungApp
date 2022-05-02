@@ -17,8 +17,9 @@ namespace TiemChungApp.Models
         public int PhoneNumber { get; set; }
         public string DOB { get; set; }
         public string Password { get; set; }
+        public string Sex { get; set; }
 
-        public User(int ID, string name, string address, int phone, string dob, string pass)
+        public User(int ID, string name, string address, int phone, string dob, string pass, string sex)
         {
             this.CustomerID = ID;
             this.Name = name;
@@ -26,6 +27,7 @@ namespace TiemChungApp.Models
             this.PhoneNumber = phone;  
             this.DOB = dob; 
             this.Password = pass;
+            this.Sex = sex;
         }
 
         public object Clone()

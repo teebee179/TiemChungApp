@@ -17,6 +17,8 @@
             <TextBox Text="{Binding PhoneNumber}" Height="25" Name="PhoneNum_Textbox"></TextBox>
             <Label Content="Date of birth (dd/mm/yyyy)" FontSize="15" Foreground="White" FontWeight="DemiBold"/>
             <TextBox Text="{Binding DOB}" Height="25" Name="DOB_Textbox"></TextBox>
+            <Label Content="Sex" FontSize="15" Foreground="White" FontWeight="DemiBold"/>
+            <TextBox Text="{Binding Sex}" Height="25" Name="Sex_Textbox"></TextBox>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Margin="5" Width="90" Name="UpdateInformationBtn" Click="UpdateInformationBtn_Click">Update</Button>
                 <Button Margin="5" Width="90" Name="cancelBtn" Click="cancelBtn_Click" >Cancel</Button>

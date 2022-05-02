@@ -30,7 +30,7 @@ namespace TiemChungApp.Windows
             InitializeComponent();
         }
 
-        private User _user = new User(9, "Nguyen Van A", "TP HCM", 0123456789, "01/01/2001", "123");
+        private User _user = new User(9, "Nguyen Van A", "TP HCM", 0123456789, "01/01/2001", "123", "Male");
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

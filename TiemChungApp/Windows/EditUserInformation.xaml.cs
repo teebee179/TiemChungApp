@@ -35,6 +35,7 @@ namespace TiemChungApp.Windows
             EditedUser.PhoneNumber = Int16.Parse(PhoneNum_Textbox.Text);
             EditedUser.Address = Address_Textbox.Text;
             EditedUser.DOB = DOB_Textbox.Text;
+            EditedUser.Sex = Sex_Textbox.Text;
             DialogResult = true;
         }
 

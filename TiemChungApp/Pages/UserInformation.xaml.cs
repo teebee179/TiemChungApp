@@ -20,17 +20,17 @@ namespace TiemChungApp.Pages
 {
     public partial class UserInformation : Page
     {
-        //class User : INotifyPropertyChanged, ICloneable
+        //class User
         //{
-        //    public event PropertyChangedEventHandler? PropertyChanged;
         //    public int CustomerID { get; set; }
         //    public string Name { get; set; }
         //    public string Address { get; set; }
         //    public int PhoneNumber { get; set; }
         //    public string DOB { get; set; }
         //    public string Password { get; set; }
+        //    public string Sex { get; set; }
 
-        //    public User(int ID, string name, string address, int phone, string dob, string pass)
+        //    public User(int ID, string name, string address, int phone, string dob, string pass, string sex)
         //    {
         //        this.CustomerID = ID;
         //        this.Name = name;
@@ -38,6 +38,7 @@ namespace TiemChungApp.Pages
         //        this.PhoneNumber = phone;
         //        this.DOB = dob;
         //        this.Password = pass;
+        //        this.Sex = sex;
         //    }
 
         //    public object Clone()
@@ -46,13 +47,13 @@ namespace TiemChungApp.Pages
         //    }
         //}
 
-        /**
+
         List<User> Users = new List<User>()
         {
-            new User(1, "Vu Quang Hiep", "TP HCM", 0909999222, "02/01/2001", "123"),
-            new User(2, "Nguyen Ngoc Phu Sy", "Hau Giang", 0909999111, "01/02/2001", "123"),
-            new User(3, "Nguyen Huynh The Bao", "TP HCM", 0909999000, "03/01/2001", "123"),
-            new User(4, "Vuong Hoang Bao", "TP HCM", 0909999333, "01/03/2001", "123"),
+            new User(1, "Vu Quang Hiep", "TP HCM", 0909999222, "02/01/2001", "123", "Male"),
+            new User(2, "Nguyen Ngoc Phu Sy", "Hau Giang", 0909999111, "01/02/2001", "123", "Male"),
+            new User(3, "Nguyen Huynh The Bao", "TP HCM", 0909999000, "03/01/2001", "123", "Male"),
+            new User(4, "Vuong Hoang Bao", "TP HCM", 0909999333, "01/03/2001", "123", "Male"),
         };
 
         public UserInformation()
@@ -83,6 +84,7 @@ namespace TiemChungApp.Pages
                         Us.Address = info.Address;
                         Us.PhoneNumber = info.PhoneNumber;
                         Us.DOB = info.DOB;
+                        Us.Sex = info.Sex;
                     }
                 }
             }
@@ -92,6 +94,6 @@ namespace TiemChungApp.Pages
         {
 
         }
-        **/
+        
     }
 }
