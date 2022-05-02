@@ -11,14 +11,21 @@ namespace TiemChungApp.Models
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        public int Id { get; set; }
-        public string UserName { get; set; }
-        public string CustomerName { get; set; }
-        public string CustomerType { get; set; }
+        public int CustomerID { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public int PhoneNumber { get; set; }
+        public string DOB { get; set; }
         public string Password { get; set; }
-        public bool IsAdmin { get; set; }
-        public bool IsDeleted { get; set; }
-        public string CreatedAt { get; set; }
-        public string UpdatedAt { get; set; }
+
+        public User(int ID, string name, string address, int phone, string dob, string pass)
+        {
+            this.CustomerID = ID;
+            this.Name = name;
+            this.Address = address;
+            this.PhoneNumber = phone;  
+            this.DOB = dob; 
+            this.Password = pass;
+        }
     }
 }

@@ -36,5 +36,11 @@ namespace TiemChungApp
             Main.Content = new ViewRegisterForm();
             Main.NavigationService.RemoveBackEntry();
         }
+
+        private void NavigateToUserInformation(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new UserInformation();
+            Main.NavigationService.RemoveBackEntry();
+        }
     }
 }

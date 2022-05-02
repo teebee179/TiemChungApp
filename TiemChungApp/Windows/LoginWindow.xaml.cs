@@ -30,16 +30,7 @@ namespace TiemChungApp.Windows
             InitializeComponent();
         }
 
-        private User _user = new User()
-        {
-            Id = 1,
-            UserName = "admin",
-            Password = "e10adc3949ba59abbe56e057f20f883e",
-            IsAdmin = true,
-            IsDeleted = false,
-            CreatedAt = "22/04/2022",
-            UpdatedAt = "22/04/2022"
-        };
+        private User _user = new User(9, "Nguyen Van A", "TP HCM", 0123456789, "01/01/2001", "123");
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -69,23 +60,20 @@ namespace TiemChungApp.Windows
 
             if (user.Password == Convert.ToHexString(hashPassword).ToLower())
             {
-                // do something (correct password)
-                if (user.IsAdmin)
+
+                if (ckbSave.IsChecked == true)
                 {
-                    if (ckbSave.IsChecked == true)
-                    {
-                        MessageBox.Show("Đăng nhập thành công");
-                        AddUpdateAppSettings("Username", user.UserName);
-                        AddUpdateAppSettings("Password", user.Password);
-                        this.Close();
-                        mainWindow.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Đăng nhập thành công");
-                        this.Close();
-                        mainWindow.Show();
-                    }
+                    MessageBox.Show("Đăng nhập thành công");
+                    AddUpdateAppSettings("Username", user.CustomerID.ToString());
+                    AddUpdateAppSettings("Password", user.Password);
+                    this.Close();
+                    mainWindow.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập thành công");
+                    this.Close();
+                    mainWindow.Show();
                 }
             }
             else

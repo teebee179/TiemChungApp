@@ -1,0 +1,24 @@
+﻿<Page x:Class="TiemChungApp.Pages.UserInformation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TiemChungApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserInformation" Loaded="Page_Loaded">
+    <Canvas Background="#039BE5" Margin="0,0,0,-30" >
+        <Label Content="User Information" FontSize="20" Foreground="White" FontWeight="DemiBold" Canvas.Left="319" Canvas.Top="10"></Label>
+        <Label Content="Customer ID:" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="30" Canvas.Top="63"/>
+        <Label Content="Address:" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="60" Canvas.Top="163" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Phone number:" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="14" Canvas.Top="213" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Date of birth:" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="27" Canvas.Top="263" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Full name:" FontSize="15" Foreground="White" FontWeight="DemiBold" Canvas.Left="49" Canvas.Top="113"/>
+
+        <TextBlock x:Name="CustomerID_Textbl" Text="{Binding CustomerID}" Height="30" Width="200" Canvas.Left="159" Canvas.Top="61" FontSize="15" Foreground="White" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Fullname_Textbl" Text="{Binding Name}" Height="30" Width="200" Canvas.Left="159" Canvas.Top="117" FontSize="15" Foreground="White" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Address_Textbl" Text="{Binding Address}" Height="30" Width="200" Canvas.Left="159" Canvas.Top="167" FontSize="15" Foreground="White" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Phonenumber_Textbl" Text="{Binding PhoneNumber}" Height="30" Width="200" Canvas.Left="159" Canvas.Top="217" FontSize="15" Foreground="White" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock x:Name="DOB_Textbl" Text="{Binding DOB}" Height="30" Width="200" Canvas.Left="159" Canvas.Top="267" FontSize="15" Foreground="White" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+    </Canvas>
+</Page>
