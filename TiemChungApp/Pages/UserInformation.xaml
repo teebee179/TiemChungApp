@@ -24,8 +24,8 @@
         <TextBlock x:Name="Sex_Textbl" Text="{Binding Sex}" Height="30" Width="200" Canvas.Left="159" Canvas.Top="317" FontSize="15" Foreground="White" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Canvas.Left="259" Canvas.Top="382" VerticalAlignment="Top">
-            <Button Margin="5" Width="90" Name="EditInformationBtn" Click="EditInformationBtn_Click" >Edit</Button>
-            <Button Margin="5" Width="90" Name="OKbtn" Click="OKbtn_Click" >OK</Button>
+            <Button Margin="5" Width="150" Name="EditInformationBtn" Click="EditInformationBtn_Click" >Edit Information</Button>
+            <Button Margin="5" Width="150" Name="ChangePasswordBtn" Click="ChangePasswordBtn_Click" >Change password</Button>
         </StackPanel>
     </Canvas>
 </Page>

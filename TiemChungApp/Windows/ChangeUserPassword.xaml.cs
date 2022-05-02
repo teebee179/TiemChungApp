@@ -35,16 +35,23 @@ namespace TiemChungApp.Windows
                 if (NewPassword_Textbox1.Password.Equals(NewPassword_Textbox2.Password))
                 {
                     EditedUser.Password = NewPassword_Textbox1.Password;
+                    MessageBoxResult result = MessageBox.Show("Password changed successfully");
+                    DialogResult = true;
                 }
                 else
                 {
-
+                    MessageBoxResult result = MessageBox.Show("Password in the 'New password and Re-enter new password' is not similar, please re-enter the form!");
                 }
             }
             else
             {
-
+                MessageBoxResult result = MessageBox.Show("Invalid passsword, please re-enter the form!");
             }
+        }
+
+        private void cancel_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

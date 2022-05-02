@@ -90,10 +90,21 @@ namespace TiemChungApp.Pages
             }
         }
 
-        private void OKbtn_Click(object sender, RoutedEventArgs e)
+        private void ChangePasswordBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            foreach (var user in Users)
+            {
+                if (user.CustomerID == 1)
+                {
+                    User Us = user;
+                    var screen = new ChangeUserPassword(Us);
+                    if (screen.ShowDialog() == true)
+                    {
+                        var info = screen.EditedUser;
+                        Us.Password = info.Password;
+                    }
+                }
+            }
         }
-        
     }
 }
