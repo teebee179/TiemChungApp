@@ -8,7 +8,33 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Receipt">
 
-    <Grid>
-        <TextBlock>This is Receipt</TextBlock>
-    </Grid>
+    <StackPanel>
+
+        <DataGrid x:Name="FormListView" AutoGenerateColumns="False" 
+                            EnableRowVirtualization="True" 
+                             Margin="5,1,5,241" RowDetailsVisibilityMode="VisibleWhenSelected" DockPanel.Dock="Top">
+            <DataGrid.ContextMenu>
+                <ContextMenu Background="LightGray">
+                    <MenuItem Header="Delete" Click="deleteMenuItem_Click"/>
+                    <!--<MenuItem Header="Edit" Click="editMenuItem_Click"/>
+                    <MenuItem Header="Detail" Click="orderDetail_Click"/>-->
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding BillID}"
+                            Header="BillID" Width="SizeToHeader"
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding CustomerID}"
+                            Header="CustomerID" Width="*"
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding CreateDate}"
+                            Header="CreateDate" Width="*"
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Total}"
+                            Header="Total" Width="*"
+                            IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="addBtnRec" Click="addBtnRec_Click">New Receipt</Button>
+    </StackPanel>
 </Page>
