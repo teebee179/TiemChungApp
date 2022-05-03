@@ -50,10 +50,47 @@ namespace TiemChungApp.Pages
 
         List<User> Users = new List<User>()
         {
-            new User(1, "Vu Quang Hiep", "TP HCM", 0909999222, "02/01/2001", "123", "Male"),
-            new User(2, "Nguyen Ngoc Phu Sy", "Hau Giang", 0909999111, "01/02/2001", "123", "Male"),
-            new User(3, "Nguyen Huynh The Bao", "TP HCM", 0909999000, "03/01/2001", "123", "Male"),
-            new User(4, "Vuong Hoang Bao", "TP HCM", 0909999333, "01/03/2001", "123", "Male"),
+            new User()
+            {
+                CustomerID = 1,
+                Name = "Vu Quang Hiep",
+                Address ="TP HCM",
+                PhoneNumber = 0909999222,
+                DOB = "02/01/2001",
+                Password = "123",
+                Sex = "Male"
+
+            },
+            new User()
+            {
+                CustomerID = 2,
+                Name = "Nguyen Ngoc Phu Sy",
+                Address = "Hau Giang",
+                PhoneNumber = 0909999111,
+                DOB ="01/02/2001",
+                Password = "123",
+                Sex = "Male"
+            },
+            new User()
+            {
+                CustomerID = 3,
+                Name = "Nguyen Huynh The Bao",
+                Address = "TP HCM",
+                PhoneNumber=0909999000,
+                DOB ="03/01/2001",
+                Password ="123",
+                Sex = "Male"
+            },
+            new User()
+            {
+                CustomerID = 4,
+                Name = "Vuong Hoang Bao",
+                Address = "TP HCM",
+                PhoneNumber=0909999333,
+                DOB ="01/03/2001",
+                Password="123",
+                Sex = "Male"
+            },
         };
 
         public UserInformation()

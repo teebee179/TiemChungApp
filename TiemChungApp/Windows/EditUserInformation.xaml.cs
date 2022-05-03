@@ -25,7 +25,7 @@ namespace TiemChungApp.Windows
         public EditUserInformation(User user)
         {
             InitializeComponent();
-            EditedUser = (User)user.Clone();
+            EditedUser = user;
             this.DataContext = user;
         }
 

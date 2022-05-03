@@ -25,7 +25,7 @@ namespace TiemChungApp.Windows
         public ChangeUserPassword(User user)
         {
             InitializeComponent();
-            EditedUser = (User)user.Clone();
+            EditedUser = user;
         }
 
         private void UpdatePassword_btn_Click(object sender, RoutedEventArgs e)

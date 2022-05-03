@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace TiemChungApp.Models
 {
-    public class Vaccine : INotifyPropertyChanged
+    public class Guardian : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
+
+        public int GuardianID { get; set; }
         public string Name { get; set; }
-        public string Status { get; set; }
-        public string ExpiredDate { get; set; }
+        public string MobilePhone { get; set; }
+        public string Relationship  { get; set; }
 
     }
 }

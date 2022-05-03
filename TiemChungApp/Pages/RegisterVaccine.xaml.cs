@@ -21,19 +21,51 @@ namespace TiemChungApp.Pages
     /// </summary>
     public partial class RegisterVaccine : Page
     {
-        public List<Vaccine> vaccines = new List<Vaccine>()
+        public static List<Vaccine> vaccines = new List<Vaccine>()
         {
-            new Vaccine("Verocell", "In stock", "1/1/2021"),
-            new Vaccine("Astra zeneca", "In stock", "1/1/2021"),
-            new Vaccine("Pfizer", "In stock", "1/1/2021"),
-            new Vaccine("Moderna", "Out stock", "1/1/2021"),
+            new Vaccine()
+            {
+                Name = "Verocell",
+                Status = "In stock",
+                ExpiredDate = "1/1/2021"
+            },
+            new Vaccine()
+            {
+                Name = "Astra zeneca",
+                Status = "In stock",
+                ExpiredDate = "1/1/2021"
+            },
+            new Vaccine()
+            {
+                Name = "Pfizer",
+                Status = "In stock",
+                ExpiredDate = "1/1/2021"
+            },
+            new Vaccine()
+            {
+                Name = "Moderna",
+                Status = "Out stock",
+                ExpiredDate = "1/1/2021"
+            },
         };
 
         public List<VaccineCombo> combo = new List<VaccineCombo>()
         {
-            new VaccineCombo("Combo for 3 to 6 years old", new List<Vaccine>()),
-            new VaccineCombo("Combo for pregnant", new List<Vaccine>()),
-            new VaccineCombo("Combo for Covid", new List<Vaccine>()),
+            new VaccineCombo()
+            {
+                ComboName = "Combo for 3 to 6 years old",
+                Vaccines = vaccines,
+            },
+            new VaccineCombo()
+            {
+                ComboName = "Combo for pregnant",
+                Vaccines = vaccines,
+            },
+            new VaccineCombo()
+            {
+                ComboName = "Combo for Covid",
+                Vaccines = vaccines,
+            },
         };
 
         public List<String> centre = new List<String>() { "Cơ sở 1", "Cơ sở 2", "Cơ sở 3" };
@@ -45,7 +77,7 @@ namespace TiemChungApp.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             var availableVaccine = from vaccine in vaccines
-                                   where vaccine.status == "In stock"
+                                   where vaccine.Status == "In stock"
                                    select vaccine;
             vaccineCombobox.ItemsSource = availableVaccine;
             selectCombo.ItemsSource = combo;
