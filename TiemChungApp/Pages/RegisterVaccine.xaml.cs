@@ -127,19 +127,19 @@ namespace TiemChungApp.Pages
 
             var newForm = new VaccinationForm()
             {
-                id = 1,
-                customerName = username.Text,
-                customerId = UserCode.Text,
+                Id = 1,
+                CustomerName = username.Text,
+                CustomerId = Int32.Parse(UserCode.Text),
                 DOB = dob.Text,
-                address = address.Text,
-                telephone = phone.Text,
-                parentName = parentName.Text,
-                parentRelationship = relationship.Text,
-                parentPhone = parentPhone.Text,
-                gender = gender,
-                centre = centre,
-                vaccine = vaccine,
-                combo = combo,
+                Address = address.Text,
+                Telephone = phone.Text,
+                ParentName = parentName.Text,
+                ParentRelationship = relationship.Text,
+                ParentPhone = parentPhone.Text,
+                Gender = gender,
+                Centre = centre,
+                Vaccine = vaccine,
+                Combo = combo,
             };
 
             forms.Add(newForm);

@@ -22,15 +22,34 @@ namespace TiemChungApp.Pages
     /// </summary>
     public partial class ViewRegisterForm : Page
     {
-        public List<VaccinationForm> forms = new List<VaccinationForm>();
+
+        private CollectionViewSource ViewRegisterFormSource;
+        public static List<VaccinationForm> forms = new List<VaccinationForm>()
+        {
+            new VaccinationForm()
+            {
+                Id = 1,
+                CustomerName = "Nguyen Huynh The Bao",
+                CustomerId = 3,
+                Gender = "Male",
+                DOB ="03/01/2001",
+                Address = "TPHCM",
+                Telephone = "0909999000",
+                Centre = "HCM",
+                Vaccine = "Moderna",
+                Combo   = "Combo for Covid",
+                InjectDate = "05/05/2022"
+            }
+        };
         public ViewRegisterForm()
         {
             InitializeComponent();
+            ViewRegisterFormSource = (CollectionViewSource)FindResource(nameof(ViewRegisterFormSource));
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            FormListView.ItemsSource = forms;
+            ViewRegisterFormSource.Source = forms;
         }
 
         private void addBtn_Click(object sender, RoutedEventArgs e)
@@ -44,7 +63,7 @@ namespace TiemChungApp.Pages
         private void deleteMenuItem_Click(object sender, RoutedEventArgs e)
         {
             var selectedItem = FormListView.SelectedItem as VaccinationForm;
-            var result = MessageBox.Show($"Bạn thật sự muốn xóa Phiếu đặt {selectedItem.id}?",
+            var result = MessageBox.Show($"Bạn thật sự muốn xóa Phiếu đặt {selectedItem.Id}?",
                "Xác nhận xóa", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {

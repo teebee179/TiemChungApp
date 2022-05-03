@@ -20,34 +20,6 @@ namespace TiemChungApp.Pages
 {
     public partial class UserInformation : Page
     {
-        //class User
-        //{
-        //    public int CustomerID { get; set; }
-        //    public string Name { get; set; }
-        //    public string Address { get; set; }
-        //    public int PhoneNumber { get; set; }
-        //    public string DOB { get; set; }
-        //    public string Password { get; set; }
-        //    public string Sex { get; set; }
-
-        //    public User(int ID, string name, string address, int phone, string dob, string pass, string sex)
-        //    {
-        //        this.CustomerID = ID;
-        //        this.Name = name;
-        //        this.Address = address;
-        //        this.PhoneNumber = phone;
-        //        this.DOB = dob;
-        //        this.Password = pass;
-        //        this.Sex = sex;
-        //    }
-
-        //    public object Clone()
-        //    {
-        //        return MemberwiseClone();
-        //    }
-        //}
-
-
         List<User> Users = new List<User>()
         {
             new User()
@@ -55,7 +27,7 @@ namespace TiemChungApp.Pages
                 CustomerID = 1,
                 Name = "Vu Quang Hiep",
                 Address ="TP HCM",
-                PhoneNumber = 0909999222,
+                PhoneNumber = "0909999222",
                 DOB = "02/01/2001",
                 Password = "123",
                 Sex = "Male"
@@ -66,7 +38,7 @@ namespace TiemChungApp.Pages
                 CustomerID = 2,
                 Name = "Nguyen Ngoc Phu Sy",
                 Address = "Hau Giang",
-                PhoneNumber = 0909999111,
+                PhoneNumber = "0909999111",
                 DOB ="01/02/2001",
                 Password = "123",
                 Sex = "Male"
@@ -76,7 +48,7 @@ namespace TiemChungApp.Pages
                 CustomerID = 3,
                 Name = "Nguyen Huynh The Bao",
                 Address = "TP HCM",
-                PhoneNumber=0909999000,
+                PhoneNumber = "0909999000",
                 DOB ="03/01/2001",
                 Password ="123",
                 Sex = "Male"
@@ -86,7 +58,7 @@ namespace TiemChungApp.Pages
                 CustomerID = 4,
                 Name = "Vuong Hoang Bao",
                 Address = "TP HCM",
-                PhoneNumber=0909999333,
+                PhoneNumber = "0909999333",
                 DOB ="01/03/2001",
                 Password="123",
                 Sex = "Male"

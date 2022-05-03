@@ -35,7 +35,7 @@ namespace TiemChungApp.Windows
             CustomerID = 9,
             Name = "Nguyen Van A",
             Address = "TP HCM",
-            PhoneNumber = 0123456789,
+            PhoneNumber = "0123456789",
             DOB = "01/01/2001",
             Password = "123",
             Sex = "Male"
