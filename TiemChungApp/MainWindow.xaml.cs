@@ -28,7 +28,7 @@ namespace TiemChungApp
         }
         private void NavigateToReceipt(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Receipt();
+            Main.Content = new ReceiptView();
         }
 
         private void NavigateToRegistergVaccination(object sender, RoutedEventArgs e)

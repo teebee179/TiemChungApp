@@ -12,19 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TiemChungApp.Models;
+using TiemChungApp.Windows;
 
 namespace TiemChungApp.Pages
 {
     /// <summary>
     /// Interaction logic for Receipt.xaml
     /// </summary>
-    public partial class Receipt : Page
+    public partial class ReceiptView : Page
     {
+        private CollectionViewSource ReceiptViewSource;
         public List<Receipt> receipts = new List<Receipt>();
-
-        public object BillID { get; private set; }
-
-        public Receipt()
+        public ReceiptView()
         {
             InitializeComponent();
         }
@@ -32,11 +32,15 @@ namespace TiemChungApp.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             FormListView.ItemsSource = receipts;
+            ReceiptViewSource = (CollectionViewSource)FindResource(nameof(ReceiptViewSource));
         }
 
         private void addBtnRec_Click(object sender, RoutedEventArgs e)
         {
-
+            var addWindow = new ReceiptWindow();
+            addWindow.ShowDialog();
+            receipts.Add(addWindow.newRec);
+            FormListView.Items.Refresh();
         }
 
         private void deleteMenuItem_Click(object sender, RoutedEventArgs e)
@@ -52,18 +56,18 @@ namespace TiemChungApp.Pages
 
         }
 
-        /*private void editMenuItem_Click(object sender, RoutedEventArgs e)
+        private void editMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            var addWindow = new RegisterVaccination();
+            var addWindow = new ReceiptWindow();
             addWindow.ShowDialog();
-            forms.Add(addWindow.newForm);
+            receipts.Add(addWindow.newRec);
         }
 
         private void orderDetail_Click(object sender, RoutedEventArgs e)
         {
-            var addWindow = new RegisterVaccination();
+            var addWindow = new ReceiptWindow();
             addWindow.ShowDialog();
-            forms.Add(addWindow.newForm);
-        }*/
+            receipts.Add(addWindow.newRec);
+        }
     }
 }
