@@ -40,9 +40,9 @@
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding name}"></TextBlock>
+                        <TextBlock Text="{Binding Name}"></TextBlock>
                         <TextBlock Text="-"></TextBlock>
-                        <TextBlock Text="{Binding expiredDate}"></TextBlock>
+                        <TextBlock Text="{Binding ExpiredDate}"></TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
@@ -52,7 +52,7 @@
         <ListBox Name="selectCombo" SelectionMode="Multiple" Width="119" Height="81" Canvas.Left="511" Canvas.Top="142">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding comboName}"></TextBlock>
+                    <TextBlock Text="{Binding ComboName}"></TextBlock>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
@@ -61,6 +61,6 @@
         <DatePicker Name="injectDate" Width="119" Canvas.Left="511" Canvas.Top="232"></DatePicker>
 
         <Button Width="80" Height="35" Name="submitBtn" Canvas.Left="299" Canvas.Top="419" Click="submitBtn_Click">Submit</Button>
-        <Button Width="80" Height="35" Name="cancelBtn" Canvas.Left="417" Canvas.Top="419">Cancel</Button>
+        <Button Width="80" Height="35" Name="cancelBtn" Canvas.Left="417" Canvas.Top="419" Click="cancelBtn_Click">Cancel</Button>
     </Canvas>
 </Window>

@@ -16,6 +16,10 @@ namespace TiemChungApp.Models
         public int Price { get; set; }
         public string Status { get; set; }
         public string ExpiredDate { get; set; }
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
 
     }
 }

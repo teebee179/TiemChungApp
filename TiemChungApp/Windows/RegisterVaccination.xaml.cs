@@ -22,6 +22,7 @@ namespace TiemChungApp.Windows
     /// </summary>
     public partial class RegisterVaccination : Window
     {
+        private CollectionViewSource RegisterFormSource;
         public static List<Vaccine> vaccines = new List<Vaccine>()
         {
             new Vaccine()
@@ -55,15 +56,15 @@ namespace TiemChungApp.Windows
             new VaccineCombo()
             {
                 ComboName = "Combo for 3 to 6 years old",
-                Vaccines = vaccines
+                Vaccines = new List<Vaccine>() { new Vaccine() { Name = "Astra zeneca"} }
             },
             new VaccineCombo(){
                 ComboName = "Combo for 3 to 6 years old",
-                Vaccines = vaccines
+                Vaccines = new List<Vaccine>() { new Vaccine() { Name = "Pfizer"} }
             },
             new VaccineCombo(){
                 ComboName = "Combo for 3 to 6 years old",
-                Vaccines = vaccines
+                Vaccines = new List<Vaccine>() { new Vaccine() { Name = "Mordena"} }
             },
         };
 
@@ -71,10 +72,12 @@ namespace TiemChungApp.Windows
         public RegisterVaccination()
         {
             InitializeComponent();
+            
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            
             var availableVaccine = from vaccine in vaccines
                                    where vaccine.Status == "In stock"
                                    select vaccine;
@@ -123,11 +126,17 @@ namespace TiemChungApp.Windows
                 centre = centreCombobox.SelectedItem.ToString();
             }
 
+            int userID = 0;
+            if (UserCode.Text != null)
+            {
+                userID = Int32.Parse(UserCode.Text);
+            }
+
             newForm = new VaccinationForm()
             {
                 Id = 1,
                 CustomerName = username.Text,
-                CustomerId = Int32.Parse(UserCode.Text),
+                CustomerId = 1,
                 DOB = dob.ToString(),
                 Address = address.Text,
                 Telephone = phone.Text,
@@ -143,6 +152,11 @@ namespace TiemChungApp.Windows
             
             this.Close();
 
+        }
+
+        private void cancelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
