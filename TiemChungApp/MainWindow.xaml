@@ -125,7 +125,7 @@
             </Grid.Effect>
 
             <Grid Background="#3B99D7">
-                <TextBlock Text="MY SHOP" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="WS Simple Gallifreyan" Foreground="White" FontSize="16"/>
+                <TextBlock Text="TIÊM CHỦNG AN BÌNH" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="WS Simple Gallifreyan" Foreground="White" FontSize="16"/>
             </Grid>
 
             <StackPanel Grid.Row="1">
