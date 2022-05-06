@@ -147,7 +147,7 @@
 
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="ViewDashboard" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="   Register Vaccination" FontFamily="Champagne &amp; Limousines"/>
+                        <TextBlock HorizontalAlignment="Center" Text="   REGISTER VACCINATION" FontFamily="Champagne &amp; Limousines"/>
                     </Grid>
                 </Button>
 
@@ -155,7 +155,7 @@
 
 					<Grid Width="150">
 						<materialDesign:PackIcon Kind="ViewDashboard" VerticalAlignment="Center"/>
-						<TextBlock HorizontalAlignment="Center" Text="User Information" FontFamily="Champagne &amp; Limousines"/>
+						<TextBlock HorizontalAlignment="Center" Text="USER INFORMATION" FontFamily="Champagne &amp; Limousines"/>
 					</Grid>
 				</Button>
             </StackPanel>
