@@ -50,6 +50,8 @@ namespace TiemChungApp.Pages
             },
         };
 
+        public static List<Vaccine> vaccinesBuyingForm = new List<Vaccine>();
+
         public VaccineBuying()
         {
             InitializeComponent();
@@ -59,6 +61,30 @@ namespace TiemChungApp.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             VaccineBuyingSource.Source = vaccines;
+        }
+
+        private void Btn_Save(object sender, RoutedEventArgs e)
+        {
+            var name = vaccineName.Text.Trim();
+            var type = vaccineType.Text.Trim();
+            var qty = quantity.Text.Trim();
+            var vaccine = new Vaccine()
+            {
+                Name = name,
+                Type = type,
+                Quantity = qty,
+            };
+
+            vaccinesBuyingForm.Add(vaccine);
+            if(vaccine.Name != "" && vaccine.Type != "" && vaccine.Quantity != "")
+            {
+                MessageBox.Show($"Create vaccine buying form with {name} vaccine and quantity: {qty}");
+            }
+            else
+            {
+                MessageBox.Show("Order failed");
+            }
+           
         }
     }
 }

@@ -21,9 +21,9 @@ namespace TiemChungApp
             this.Close();
         }
 
-        private void NavigateToDashboard(object sender, RoutedEventArgs e)
+        private void NavigateToVaccineBuying(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Dashboard();
+            Main.Content = new VaccineBuying();
             Main.NavigationService.RemoveBackEntry();
         }
         private void NavigateToReceipt(object sender, RoutedEventArgs e)

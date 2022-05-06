@@ -11,6 +11,9 @@ namespace TiemChungApp.Models
     {
         public event PropertyChangedEventHandler? PropertyChanged;
         public string Name { get; set; }
+        public string Type { get; set; }
+        public string Quantity { get; set; }
+        public int Price { get; set; }
         public string Status { get; set; }
         public string ExpiredDate { get; set; }
 
