@@ -31,7 +31,7 @@ namespace TiemChungApp.Windows
 
             newRec = new Receipt()
             {
-                BillID = billid.ToString(),
+                BillID = billid.Text,
                 CustomerID = Int32.Parse(cusid.Text),
                 CreateDate = created.ToString(),
                 Total = Int32.Parse(total.Text),

@@ -82,9 +82,7 @@ namespace TiemChungApp.Pages
 
         private void orderDetail_Click(object sender, RoutedEventArgs e)
         {
-            var addWindow = new RegisterVaccination();
-            addWindow.ShowDialog();
-            forms.Add(addWindow.newForm);
+
         }
     }
 }

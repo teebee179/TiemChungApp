@@ -65,9 +65,7 @@ namespace TiemChungApp.Pages
 
         private void orderDetail_Click(object sender, RoutedEventArgs e)
         {
-            var addWindow = new ReceiptWindow();
-            addWindow.ShowDialog();
-            receipts.Add(addWindow.newRec);
+
         }
     }
 }
