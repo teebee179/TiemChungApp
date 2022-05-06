@@ -132,14 +132,14 @@
                 <Button Margin="10" Background="#3B99D7" BorderBrush="#3B99D7" Click="NavigateToVaccineBuying">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="ViewDashboard" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="VACCINE BUYING" FontFamily="Champagne &amp; Limousines"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Vaccine Buying" FontFamily="Champagne &amp; Limousines"/>
                     </Grid>
                 </Button>
 
                 <Button Margin="10" Background="#3B99D7" BorderBrush="#3B99D7" Click="NavigateToReceipt">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="Receipt" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="RECEIPT" FontFamily="Champagne &amp; Limousines"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Receipt" FontFamily="Champagne &amp; Limousines"/>
                     </Grid>
                 </Button>
                 
@@ -147,7 +147,7 @@
 
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="ViewDashboard" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="   REGISTER VACCINATION" FontFamily="Champagne &amp; Limousines"/>
+                        <TextBlock HorizontalAlignment="Center" Text="   Register Vaccination" FontFamily="Champagne &amp; Limousines"/>
                     </Grid>
                 </Button>
 
@@ -155,7 +155,7 @@
 
 					<Grid Width="150">
 						<materialDesign:PackIcon Kind="ViewDashboard" VerticalAlignment="Center"/>
-						<TextBlock HorizontalAlignment="Center" Text="USER INFORMATION" FontFamily="Champagne &amp; Limousines"/>
+						<TextBlock HorizontalAlignment="Center" Text="User Information" FontFamily="Champagne &amp; Limousines"/>
 					</Grid>
 				</Button>
             </StackPanel>
