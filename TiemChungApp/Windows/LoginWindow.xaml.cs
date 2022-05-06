@@ -30,24 +30,25 @@ namespace TiemChungApp.Windows
             InitializeComponent();
         }
 
-        private User _user = new User()
+        User user = new User()
         {
-            CustomerID = 9,
-            Name = "Nguyen Van A",
+            CustomerID = 1,
+            Name = "Vu Quang Hiep",
             Address = "TP HCM",
-            PhoneNumber = "0123456789",
-            DOB = "01/01/2001",
+            PhoneNumber = "0909999222",
+            DOB = "02/01/2001",
             Password = "123",
             Sex = "Male"
+
         };
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            if (GetConfiguration("Username") != "" && GetConfiguration("Password") != "")
-            {
-                this.Close();
-                mainWindow.Show();
-            }
+            //if (GetConfiguration("Username") != "" && GetConfiguration("Password") != "")
+            //{
+            //    this.Close();
+            //    mainWindow.Show();
+            //}
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -56,7 +57,8 @@ namespace TiemChungApp.Windows
             byte[] password = System.Text.Encoding.ASCII.GetBytes(txtPassword.Password);
 
             //var user = _context.Users.SingleOrDefault(x => x.UserName == username);
-            var user = _user;
+            //var user = from user in Users
+            //           select user;
 
             var hashPassword = MD5.HashData(password);
 
@@ -73,8 +75,8 @@ namespace TiemChungApp.Windows
                 if (ckbSave.IsChecked == true)
                 {
                     MessageBox.Show("Đăng nhập thành công");
-                    AddUpdateAppSettings("Username", user.CustomerID.ToString());
-                    AddUpdateAppSettings("Password", user.Password);
+                    //AddUpdateAppSettings("Username", user.CustomerID.ToString());
+                    //AddUpdateAppSettings("Password", user.Password);
                     this.Close();
                     mainWindow.Show();
                 }
@@ -98,45 +100,45 @@ namespace TiemChungApp.Windows
             this.Close();
         }
 
-        private void AddUpdateAppSettings(string key, string value)
-        {
-            try
-            {
-                ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
-                fileMap.ExeConfigFilename = AppDomain.CurrentDomain.BaseDirectory + "App.config";
-                Configuration configFile = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
-                var settings = configFile.AppSettings.Settings;
-                if (settings[key] == null)
-                {
-                    settings.Add(key, value);
-                }
-                else
-                {
-                    settings[key].Value = value;
-                }
-                configFile.Save(ConfigurationSaveMode.Modified);
-                ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
-            }
-            catch (ConfigurationErrorsException)
-            {
-                Console.WriteLine("Error writing app settings");
-            }
-        }
+        //private void AddUpdateAppSettings(string key, string value)
+        //{
+        //    try
+        //    {
+        //        ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
+        //        fileMap.ExeConfigFilename = AppDomain.CurrentDomain.BaseDirectory + "App.config";
+        //        Configuration configFile = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
+        //        var settings = configFile.AppSettings.Settings;
+        //        if (settings[key] == null)
+        //        {
+        //            settings.Add(key, value);
+        //        }
+        //        else
+        //        {
+        //            settings[key].Value = value;
+        //        }
+        //        configFile.Save(ConfigurationSaveMode.Modified);
+        //        ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
+        //    }
+        //    catch (ConfigurationErrorsException)
+        //    {
+        //        Console.WriteLine("Error writing app settings");
+        //    }
+        //}
 
-        public string GetConfiguration(string key)
-        {
-            ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
-            fileMap.ExeConfigFilename = AppDomain.CurrentDomain.BaseDirectory + "App.config";
-            Configuration configFile = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
-            var settings = configFile.AppSettings.Settings;
-            if (settings[key] == null)
-            {
-                settings.Add(key, "");
-                configFile.Save(ConfigurationSaveMode.Modified);
-                ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
-            }
-            string ans = configFile.AppSettings.Settings[key].Value;
-            return ans;
-        }
+        //public string GetConfiguration(string key)
+        //{
+        //    ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
+        //    fileMap.ExeConfigFilename = AppDomain.CurrentDomain.BaseDirectory + "App.config";
+        //    Configuration configFile = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
+        //    var settings = configFile.AppSettings.Settings;
+        //    if (settings[key] == null)
+        //    {
+        //        settings.Add(key, "");
+        //        configFile.Save(ConfigurationSaveMode.Modified);
+        //        ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
+        //    }
+        //    string ans = configFile.AppSettings.Settings[key].Value;
+        //    return ans;
+        //}
     }
 }

@@ -11,7 +11,6 @@
         <CollectionViewSource x:Key="ViewRegisterFormSource"/>
     </Page.Resources>
     <StackPanel>
-    
         <DataGrid x:Name="FormListView" AutoGenerateColumns="False" 
                             EnableRowVirtualization="True" 
                             ItemsSource="{Binding Source={StaticResource ViewRegisterFormSource}}" 

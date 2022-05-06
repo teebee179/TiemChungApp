@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TiemChungApp.Models;
 
 namespace TiemChungApp.Pages
 {
@@ -20,9 +21,44 @@ namespace TiemChungApp.Pages
     /// </summary>
     public partial class VaccineBuying : Page
     {
+        private CollectionViewSource VaccineBuyingSource;
+        public static List<Vaccine> vaccines = new List<Vaccine>()
+        {
+            new Vaccine()
+            {
+                Name = "Verocell",
+                Status = "In stock",
+                ExpiredDate = "1/1/2021"
+            },
+            new Vaccine()
+            {
+                Name = "Astra zeneca",
+                Status = "In stock",
+                ExpiredDate = "1/1/2021"
+            },
+            new Vaccine()
+            {
+                Name = "Pfizer",
+                Status = "In stock",
+                ExpiredDate = "1/1/2021"
+            },
+            new Vaccine()
+            {
+                Name = "Moderna",
+                Status = "Out stock",
+                ExpiredDate = "1/1/2021"
+            },
+        };
+
         public VaccineBuying()
         {
             InitializeComponent();
+            VaccineBuyingSource = (CollectionViewSource)FindResource(nameof(VaccineBuyingSource));
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            VaccineBuyingSource.Source = vaccines;
         }
     }
 }

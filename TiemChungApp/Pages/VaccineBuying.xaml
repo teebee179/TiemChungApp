@@ -6,9 +6,26 @@
       xmlns:local="clr-namespace:TiemChungApp.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="VaccineBuying">
-
+      Title="VaccineBuying" Loaded="Page_Loaded">
+    <Page.Resources>
+        <CollectionViewSource x:Key="VaccineBuyingSource"/>
+    </Page.Resources>
     <Grid>
-        
+        <DataGrid x:Name="VaccineListView" AutoGenerateColumns="False" 
+                            EnableRowVirtualization="True" 
+                            ItemsSource="{Binding Source={StaticResource VaccineBuyingSource}}" 
+                            Margin="5,1,5,241" RowDetailsVisibilityMode="VisibleWhenSelected" DockPanel.Dock="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Name}"
+                            Header="Name" Width="*"
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Status}"
+                            Header="Status" Width="*"
+                            IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding ExpiredDate}"
+                            Header="ExpiredDate" Width="*"
+                            IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>
